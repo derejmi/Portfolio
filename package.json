@@ -1,5 +1,5 @@
 {
-  "name": "music_app",
+  "name": "portfolio_app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -37,6 +37,8 @@
     "@babel/preset-env": "^7.12.7",
     "@babel/preset-react": "^7.12.7",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-mdl": "^2.1.0",
+    "react-router-dom": "^5.2.0"
   }
 }
