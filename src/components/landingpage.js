@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, Cell } from "react-mdl";
+import Tunes from "./tunes";
 
 class LandingPage extends React.Component {
   render() {
@@ -54,6 +55,7 @@ class LandingPage extends React.Component {
                 </a>
               </div>
             </div>
+            <Tunes />
           </Cell>
         </Grid>
       </div>
