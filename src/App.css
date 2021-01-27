@@ -18,12 +18,25 @@
   font-family: "Jost", sans-serif !important;
 }
 
+.about-title {
+  color: white;
+  width: 40%;
+  margin: 20px auto;
+}
+
+.tunes {
+  color: white;
+  font-family: "Jost", sans-serif !important;
+  margin: 30px auto 0px auto;
+  font-size: 24px;
+}
+
 .about-me {
   color: white;
   font-family: "Jost", sans-serif !important;
-  margin: 20px auto;
+  margin: 30px auto;
   width: 80%;
-  font-size: 36px;
+  font-size: 33px;
   line-height: 1.5em;
 }
 
@@ -72,4 +85,8 @@
 
 .content {
   width: 80%;
+}
+
+#about-div {
+  margin-left: 150px;
 }

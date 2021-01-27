@@ -48,6 +48,11 @@ class Tunes extends React.Component {
         console.log(parsed, "parsed");
 
         this.setState({ name, artist, nowPlaying, lastPlayedUnits });
+
+        let tunesText = nowPlaying
+          ? "Right now, I'm listening to "
+          : `${lastPlayedUnits} ago, I listened to `;
+        this.setState({ tunesText });
       });
   }
 
@@ -73,9 +78,24 @@ class Tunes extends React.Component {
   };
 
   render() {
-    let tunesText = "";
+    let tunesText = this.state.tunesText;
+    let artistText = " by " + this.state.artist;
+    let artist = this.state.artist;
+    let name = this.state.name;
+    let youTube = `https://www.youtube.com/results?search_query=${artist}+${name}`;
 
-    return <p>tunesText</p>;
+    return (
+      <div className="tunes">
+        {/* <p id="tunes">{tunesSentance}</p>; */}
+        <span>{tunesText}</span>
+        <span>
+          <a href={youTube} target="_blank">
+            {name}
+          </a>
+        </span>
+        <span>{artistText}</span>
+      </div>
+    );
   }
 }
 

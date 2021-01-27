@@ -19,38 +19,22 @@ class LandingPage extends React.Component {
               <h2>Software Engineer</h2>
               <div className="social-links">
                 {/* Github */}
-                <a
-                  href="http://google.com"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
+                <a href="https://github.com/derejmi" target="_blank">
                   <i className="fa fa-github-square" aria-hidden="true" />
                 </a>
 
                 {/* LinkedIn */}
-                <a
-                  href="http://google.com"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
+                <a href="http://google.com" target="_blank">
                   <i className="fa fa-linkedin-square" aria-hidden="true" />
                 </a>
 
                 {/* Spotify*/}
-                <a
-                  href="http://google.com"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
+                <a href="http://google.com" target="_blank">
                   <i className="fa fa-spotify" aria-hidden="true" />
                 </a>
 
                 {/* Gmail*/}
-                <a
-                  href="http://google.com"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
+                <a href="http://google.com" target="_blank">
                   <i className="fa fa-envelope" aria-hidden="true" />
                 </a>
               </div>

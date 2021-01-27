@@ -3,7 +3,7 @@ import React from "react";
 class AboutMe extends React.Component {
   render() {
     return (
-      <div>
+      <div id="about-div">
         <h1 className="about-title">About Me</h1>
         <p className="about-me">
           I'm an inquisitive problem solver who enjoys delving into error
