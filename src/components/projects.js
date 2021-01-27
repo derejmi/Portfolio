@@ -20,18 +20,18 @@ class Projects extends React.Component {
     if (this.state.activeProject == 0) {
       return (
         <div className="final-project">
-          <Card shadow={5} style={{ minWidth: "450", margin: "auto" }}>
+          <Card shadow={5} style={{ minWidth: "750px", margin: "auto" }}>
             <CardTitle
               style={{
                 color: "#fff",
-                height: "176px",
+                height: "400px",
                 background:
                   "url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover",
               }}
             >
               Final Project
             </CardTitle>
-            <CardText></CardText>
+            <CardText>Habit</CardText>
             <CardActions border>
               <Button colored></Button>
               <Button colored></Button>
@@ -46,11 +46,12 @@ class Projects extends React.Component {
     } else if (this.state.activeProject === 1) {
       return (
         <div className="habit-hub">
-          <Card shadow={5} style={{ minWidth: "800", margin: "auto" }}>
+          <Card shadow={5} style={{ minWidth: "900", margin: "auto" }}>
             <CardTitle
               style={{
                 color: "#fff",
-                height: "176px",
+                height: "352px",
+                // width: "500px",
                 background:
                   "url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover",
               }}
@@ -59,9 +60,9 @@ class Projects extends React.Component {
             </CardTitle>
             <CardText></CardText>
             <CardActions border>
-              <Button colored></Button>
-              <Button colored></Button>
-              <Button colored></Button>
+              <Button colored>X</Button>
+              <Button colored>Y</Button>
+              <Button colored>Z</Button>
             </CardActions>
             <CardMenu style={{ color: "#fff" }}>
               <IconButton name="share" />
@@ -211,18 +212,19 @@ class Projects extends React.Component {
           onChange={(tabId) => this.setState({ activeProject: tabId })}
           ripple
         >
-          <Tab>Final Project</Tab>
           <Tab>Habit Tracker</Tab>
+          <Tab>URL Shortner</Tab>
           <Tab>Trivia Quiz</Tab>
-          <Tab>URL Shortener</Tab>
+          <Tab>Anonymous Blog</Tab>
           <Tab>Other Projects</Tab>
         </Tabs>
-
-        <Grid>
-          <Cell col={12}>
-            <div className="content">{this.toggleProjects()}</div>
-          </Cell>
-        </Grid>
+        <div style={{ width: "80%", margin: "auto" }}>
+          <Grid>
+            <Cell col={12}>
+              <div className="content">{this.toggleProjects()}</div>
+            </Cell>
+          </Grid>
+        </div>
       </div>
     );
   }

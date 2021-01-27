@@ -54,7 +54,7 @@
 
 .social-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 50%;
   margin: 0 auto;
 }
@@ -68,4 +68,8 @@
 .mdl-layout__content {
   width: 80%;
   margin: 0 AUTO;
+}
+
+.content {
+  width: 80%;
 }
