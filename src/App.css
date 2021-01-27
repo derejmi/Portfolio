@@ -18,6 +18,19 @@
   font-family: "Jost", sans-serif !important;
 }
 
+.about-me {
+  color: white;
+  font-family: "Jost", sans-serif !important;
+  margin: 20px auto;
+  width: 80%;
+  font-size: 36px;
+  line-height: 1.5em;
+}
+
+.projects-page {
+  width: 80%;
+  margin: 0 auto;
+}
 .animated-img {
   margin-top: 15em;
   height: 200px;
@@ -50,4 +63,9 @@
   color: white;
   font-size: 3em;
   padding: 8px;
+}
+
+.mdl-layout__content {
+  width: 80%;
+  margin: 0 AUTO;
 }

@@ -19,7 +19,6 @@ class App extends React.Component {
             scroll
           >
             <Navigation>
-              <Link to="/resume">Resume</Link>
               <Link to="/aboutme">About Me</Link>
               <Link to="/projects">Projects</Link>
             </Navigation>
@@ -32,7 +31,6 @@ class App extends React.Component {
             }
           >
             <Navigation>
-              <Link to="/resume">Resume</Link>
               <Link to="/aboutme">About Me</Link>
               <Link to="/projects">Projects</Link>
             </Navigation>
