@@ -1,7 +1,7 @@
 import React from "react";
 
 class Tunes extends React.Component {
-  state = { title: "", artist: "" };
+  state = {};
 
   componentDidMount() {
     const url =
@@ -10,16 +10,67 @@ class Tunes extends React.Component {
       .then((r) => r.json())
       .then((parsed) => {
         const recenttrack = parsed.recenttracks.track[0];
-        const nowPlaying = recenttrack["@attr"].nowplaying;
+        //now Playing
+        let nowPlaying = false;
+        if (recenttrack["@attr"]) {
+          nowPlaying = recenttrack["@attr"].nowplaying ? true : false;
+        }
+        //artist
         const artist = recenttrack.artist["#text"];
+        //name
+        const name = recenttrack.name;
+        let lastPlayed;
+        let lastPlayedAPI;
 
-        console.log(recenttrack, "recent");
+        if (!nowPlaying) {
+          lastPlayedAPI = recenttrack.date.uts;
+        }
+
+        lastPlayed = nowPlaying ? 0 : lastPlayedAPI;
+
+        // convert the uts into something useful text wise
+
+        let lastPlayedUnits = "null";
+        if (lastPlayed) {
+          lastPlayedUnits = this.timeSincePlayed(lastPlayed);
+          if (lastPlayedUnits[0] != "0") {
+            lastPlayedUnits += "s";
+          }
+        }
+        console.log(lastPlayedUnits, "lastPlayedUnits");
+        //lastplayed
+
         console.log(nowPlaying, "nowPlaying");
         console.log(artist, "artist");
+        console.log(name, "name");
+        console.log(lastPlayed, "lastPlayed");
 
         console.log(parsed, "parsed");
+
+        this.setState({ name, artist, nowPlaying, lastPlayedUnits });
       });
   }
+
+  timeSincePlayed = (date) => {
+    const seconds = Math.floor(new Date().getTime() / 1000 - date);
+    let interval = Math.floor(seconds / 31536000);
+
+    if (interval > 1) return interval + " year";
+
+    interval = Math.floor(seconds / 2592000);
+    if (interval > 1) return interval + " month";
+
+    interval = Math.floor(seconds / 86400);
+    if (interval >= 1) return interval + " day";
+
+    interval = Math.floor(seconds / 3600);
+    if (interval >= 1) return interval + " hour";
+
+    interval = Math.floor(seconds / 60);
+    if (interval > 1) return interval + " minute";
+
+    return Math.floor(seconds) + " second";
+  };
 
   render() {
     let tunesText = "";
