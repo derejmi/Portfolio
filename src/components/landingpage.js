@@ -24,12 +24,18 @@ class LandingPage extends React.Component {
                 </a>
 
                 {/* LinkedIn */}
-                <a href="http://google.com" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/der%C3%A9-jemireyigbe-8203a796/"
+                  target="_blank"
+                >
                   <i className="fa fa-linkedin-square" aria-hidden="true" />
                 </a>
 
                 {/* Spotify*/}
-                <a href="http://google.com" target="_blank">
+                <a
+                  href="https://open.spotify.com/user/djlightning367"
+                  target="_blank"
+                >
                   <i className="fa fa-spotify" aria-hidden="true" />
                 </a>
 
