@@ -20,7 +20,7 @@ class Projects extends React.Component {
     if (this.state.activeProject == 0) {
       return (
         <div className="habit-hub">
-          <Card shadow={5} style={{ minWidth: "750px", margin: "auto" }}>
+          <Card shadow={5} style={{ minWidth: "700px", margin: "auto" }}>
             <CardTitle
               style={{
                 color: "#fff",
@@ -54,7 +54,7 @@ class Projects extends React.Component {
     } else if (this.state.activeProject === 1) {
       return (
         <div className="trivia-quiz">
-          <Card shadow={5} style={{ minWidth: "750px", margin: "auto" }}>
+          <Card shadow={5} style={{ minWidth: "700px", margin: "auto" }}>
             <CardTitle
               style={{
                 color: "#fff",
@@ -93,7 +93,7 @@ class Projects extends React.Component {
     } else if (this.state.activeProject === 2) {
       return (
         <div className="URL-Shortener">
-          <Card shadow={5} style={{ minWidth: "750px", margin: "auto" }}>
+          <Card shadow={5} style={{ minWidth: "700px", margin: "auto" }}>
             <CardTitle
               style={{
                 color: "#fff",
@@ -136,7 +136,7 @@ class Projects extends React.Component {
     } else if (this.state.activeProject === 3) {
       return (
         <div className="Anon-Journal">
-          <Card shadow={5} style={{ minWidth: "750px", margin: "auto" }}>
+          <Card shadow={5} style={{ minWidth: "700px", margin: "auto" }}>
             <CardTitle
               style={{
                 color: "#fff",
@@ -158,7 +158,7 @@ class Projects extends React.Component {
             </CardText>
             <CardActions border>
               <Button
-                href="https://github.com/derejmi/Flask-URL-Shortener"
+                href="https://github.com/derejmi/Anonymous-Journal"
                 target="_blank"
                 colored
               >
@@ -176,78 +176,49 @@ class Projects extends React.Component {
     } else if (this.state.activeProject === 4) {
       return (
         <div className="projects-grid">
-          {/* Project 1 */}
-          <Card shadow={5} style={{ minWidth: "450", margin: "auto" }}>
+          <Card shadow={5} style={{ minWidth: "450px", margin: "20px" }}>
             <CardTitle
               style={{
                 color: "#fff",
-                height: "176px",
-                background: "url() center / cover",
+                height: "200px",
+                background:
+                  "url(https://i.imgur.com/VRXar1R.png) center / cover",
               }}
-            >
-              Guthub Repo App
-            </CardTitle>
+            ></CardTitle>
             <CardText>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's
+              Github Repo App: A React app which displays info about your Github
+              repos. Uses the Github API to fetch data.
             </CardText>
             <CardActions border>
-              <Button colored>GitHub</Button>
-              <Button colored>CodePen</Button>
-              <Button colored>Live Demo</Button>
+              <Button
+                href="https://github.com/derejmi/Lap-2-Coding-Challenge-Github-Repo-App"
+                target="_blank"
+                colored
+              >
+                View on Github
+              </Button>
             </CardActions>
-            <CardMenu style={{ color: "#fff" }}>
-              <IconButton name="share" />
-            </CardMenu>
           </Card>
 
-          {/* Project 2 */}
-          <Card shadow={5} style={{ minWidth: "450", margin: "auto" }}>
+          <Card shadow={5} style={{ minWidth: "450px", margin: "20px" }}>
             <CardTitle
               style={{
                 color: "#fff",
-                height: "176px",
+                height: "200px",
                 background:
-                  "url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover",
+                  "url(https://i.imgur.com/NowbryM.jpg) center / cover",
               }}
-            >
-              Anonymous Blog
-            </CardTitle>
-            <CardText></CardText>
+            ></CardTitle>
+            <CardText>Google Clone - built in HTML,CSS and JavaScript</CardText>
             <CardActions border>
-              <Button colored></Button>
-              <Button colored></Button>
-              <Button colored></Button>
+              <Button
+                href="https://github.com/derejmi/Lap-1-Coding-Challenge-Google-Clone"
+                target="_blank"
+                colored
+              >
+                View on Github
+              </Button>
             </CardActions>
-            <CardMenu style={{ color: "#fff" }}>
-              <IconButton name="share" />
-            </CardMenu>
-          </Card>
-
-          {/* Project 3 */}
-          <Card shadow={5} style={{ minWidth: "450", margin: "auto" }}>
-            <CardTitle
-              style={{
-                color: "#fff",
-                height: "176px",
-                background:
-                  "url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover",
-              }}
-            >
-              Google Clone
-            </CardTitle>
-            <CardText>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's
-            </CardText>
-            <CardActions border>
-              <Button colored>GitHub</Button>
-              <Button colored>CodePen</Button>
-              <Button colored>Live Demo</Button>
-            </CardActions>
-            <CardMenu style={{ color: "#fff" }}>
-              <IconButton name="share" />
-            </CardMenu>
           </Card>
         </div>
       );
