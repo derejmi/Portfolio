@@ -13,7 +13,7 @@ class App extends React.Component {
             className="header-color"
             title={
               <Link style={{ textDecoration: "none", color: "white" }} to="/">
-                MyPortfolio
+                Home
               </Link>
             }
             scroll

@@ -40,7 +40,7 @@ class LandingPage extends React.Component {
                 </a>
 
                 {/* Gmail*/}
-                <a href="http://google.com" target="_blank">
+                <a href="mailto:derejemireyigbe@gmail.com" target="_blank">
                   <i className="fa fa-envelope" aria-hidden="true" />
                 </a>
               </div>
