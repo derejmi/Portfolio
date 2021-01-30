@@ -27,12 +27,12 @@ const config = {
     new HtmlWebpackPlugin({
       // used to add the JavaScript code to the HTML
       template: path.join(PUBLIC_DIRECTORY, "index.html"),
-      favicon: "./src/brain.ico",
+      favicon: "./src/favicon.ico",
     }),
     new CopyWebpackPlugin({
       patterns: [
         // relative path is from src
-        { from: "./src/brain.ico", to: "src" }, // <- your path to favicon
+        { from: "./src/favicon.ico", to: "src" }, // <- your path to favicon
       ],
     }),
   ],
