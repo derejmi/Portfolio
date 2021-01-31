@@ -20,11 +20,11 @@ class Projects extends React.Component {
     if (this.state.activeProject == 0) {
       return (
         <div className="habit-hub">
-          <Card shadow={5} style={{ minWidth: "700px", margin: "auto" }}>
+          <Card shadow={5} style={{ width: "60vw", margin: "auto" }}>
             <CardTitle
               style={{
                 color: "#fff",
-                height: "450px",
+                height: "400px",
                 background:
                   "url(https://i.imgur.com/23fpICo.jpg) center / cover",
               }}
@@ -54,11 +54,11 @@ class Projects extends React.Component {
     } else if (this.state.activeProject === 1) {
       return (
         <div className="trivia-quiz">
-          <Card shadow={5} style={{ minWidth: "700px", margin: "auto" }}>
+          <Card shadow={5} style={{ minWidth: "60vw", margin: "auto" }}>
             <CardTitle
               style={{
                 color: "#fff",
-                height: "450px",
+                height: "400px",
                 // width: "500px",
                 background:
                   "url(https://i.imgur.com/4OD0g9B.jpg) center / cover",
@@ -93,11 +93,11 @@ class Projects extends React.Component {
     } else if (this.state.activeProject === 2) {
       return (
         <div className="URL-Shortener">
-          <Card shadow={5} style={{ minWidth: "700px", margin: "auto" }}>
+          <Card shadow={5} style={{ minWidth: "60vw", margin: "auto" }}>
             <CardTitle
               style={{
                 color: "#fff",
-                height: "450px",
+                height: "400px",
                 background:
                   "url(https://i.imgur.com/T2auW1o.jpg) center / cover",
               }}
@@ -127,20 +127,17 @@ class Projects extends React.Component {
               </Button>
               <Button colored></Button>
             </CardActions>
-            <CardMenu style={{ color: "#fff" }}>
-              <IconButton name="share" />
-            </CardMenu>
           </Card>
         </div>
       );
     } else if (this.state.activeProject === 3) {
       return (
         <div className="Anon-Journal">
-          <Card shadow={5} style={{ minWidth: "700px", margin: "auto" }}>
+          <Card shadow={5} style={{ minWidth: "60vw", margin: "auto" }}>
             <CardTitle
               style={{
                 color: "#fff",
-                height: "450px",
+                height: "400px",
                 background:
                   "url(https://i.imgur.com/IJ22Jc0.jpg) center / cover",
               }}
@@ -176,7 +173,7 @@ class Projects extends React.Component {
     } else if (this.state.activeProject === 4) {
       return (
         <div className="projects-grid">
-          <Card shadow={5} style={{ minWidth: "450px", margin: "20px" }}>
+          <Card shadow={5} style={{ minWidth: "40vw", margin: "20px" }}>
             <CardTitle
               style={{
                 color: "#fff",
@@ -200,7 +197,7 @@ class Projects extends React.Component {
             </CardActions>
           </Card>
 
-          <Card shadow={5} style={{ minWidth: "450px", margin: "20px" }}>
+          <Card shadow={5} style={{ minWidth: "40vw", margin: "20px" }}>
             <CardTitle
               style={{
                 color: "#fff",
