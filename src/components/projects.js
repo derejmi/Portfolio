@@ -24,7 +24,7 @@ class Projects extends React.Component {
             <CardTitle
               style={{
                 color: "#fff",
-                height: "400px",
+                height: "450px",
                 background:
                   "url(https://i.imgur.com/23fpICo.jpg) center / cover",
               }}
