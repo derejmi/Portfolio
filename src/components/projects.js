@@ -45,7 +45,13 @@ class Projects extends React.Component {
               >
                 View on Github
               </Button>
-              <Button colored></Button>
+              <Button
+                href="https://habithub.netlify.app/"
+                target="_blank"
+                colored
+              >
+                Try Habit-Hub
+              </Button>
               <Button colored></Button>
             </CardActions>
           </Card>
