@@ -35,8 +35,8 @@ class Tunes extends React.Component {
           lastPlayedUnits = this.timeSincePlayed(lastPlayed);
           if (
             lastPlayedUnits[0] != "0" &&
-            lastPlayedUnits[0] != "1" &&
-            lastPlayedUnits[1] != " "
+            lastPlayedUnits.slice(0, 2) != "1 "
+            // lastPlayedUnits[1] !== " "
           ) {
             lastPlayedUnits += "s";
           }
