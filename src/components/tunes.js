@@ -41,15 +41,6 @@ class Tunes extends React.Component {
             lastPlayedUnits += "s";
           }
         }
-        console.log(lastPlayedUnits, "lastPlayedUnits");
-        //lastplayed
-
-        console.log(nowPlaying, "nowPlaying");
-        console.log(artist, "artist");
-        console.log(name, "name");
-        console.log(lastPlayed, "lastPlayed");
-
-        console.log(parsed, "parsed");
 
         this.setState({ name, artist, nowPlaying, lastPlayedUnits });
 
