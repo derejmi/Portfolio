@@ -1,4 +1,4 @@
-# www.dere-jemireyigbe.netlify.app
+# dere-jemireyigbe.netlify.app
 
 Visit my Portfolio page: dere-jemireyigbe.netlify.app
 
