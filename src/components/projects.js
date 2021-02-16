@@ -19,6 +19,42 @@ class Projects extends React.Component {
   toggleProjects() {
     if (this.state.activeProject == 0) {
       return (
+        <div className="algorhythm">
+          <Card shadow={5} style={{ width: "60vw", margin: "auto" }}>
+            <CardTitle
+              style={{
+                color: "#fff",
+                height: "450px",
+                background:
+                  "url(https://i.imgur.com/x5Qgw7p.jpg) center / cover",
+              }}
+            ></CardTitle>
+            <CardText>
+              Algorhythm: Get through the pandemic with the power of music!
+              Algorhythm is an online jukebox and collaborative music app. A
+              host(must have a Spotify premium account!) can set up a room and
+              can control what music to play, each room has a unique, secret
+              code and guests can join the room with said code. Guests can
+              control playback and even vote to skip songs. Comes complete with
+              Lyrics so you can sing along over zoom calls or have in-person
+              parties (when conditions change)! Built with Python, Django,
+              React, the Spotify API and the Lyrics.ovh API.
+            </CardText>
+            <CardActions border>
+              <Button
+                href="https://github.com/derejmi/Algorhythm"
+                target="_blank"
+                colored
+              >
+                View on Github
+              </Button>
+              <Button colored></Button>
+            </CardActions>
+          </Card>
+        </div>
+      );
+    } else if (this.state.activeProject === 1) {
+      return (
         <div className="habit-hub">
           <Card shadow={5} style={{ width: "60vw", margin: "auto" }}>
             <CardTitle
@@ -57,7 +93,7 @@ class Projects extends React.Component {
           </Card>
         </div>
       );
-    } else if (this.state.activeProject === 1) {
+    } else if (this.state.activeProject === 2) {
       return (
         <div className="trivia-quiz">
           <Card shadow={5} style={{ minWidth: "60vw", margin: "auto" }}>
@@ -96,7 +132,7 @@ class Projects extends React.Component {
           </Card>
         </div>
       );
-    } else if (this.state.activeProject === 2) {
+    } else if (this.state.activeProject === 3) {
       return (
         <div className="URL-Shortener">
           <Card shadow={5} style={{ minWidth: "60vw", margin: "auto" }}>
@@ -136,46 +172,6 @@ class Projects extends React.Component {
           </Card>
         </div>
       );
-    } else if (this.state.activeProject === 3) {
-      return (
-        <div className="Anon-Journal">
-          <Card shadow={5} style={{ minWidth: "60vw", margin: "auto" }}>
-            <CardTitle
-              style={{
-                color: "#fff",
-                height: "400px",
-                background:
-                  "url(https://i.imgur.com/IJ22Jc0.jpg) center / cover",
-              }}
-            >
-              Galaxy Brain
-            </CardTitle>
-            <CardText>
-              AnonJournal: An anonymous blogging site users are able to create
-              and read anonymous posts. Posts have an enforceable 200 character
-              limit and can incorporate GIFs via the Giphy API. Users can react
-              to submitted posts with comments and emojis, they can also see the
-              metrics on how many comments and specific reactions each post
-              recieves. Built with HTML, CSS and JavaScript using a JSON data
-              structure for persistent storage.
-            </CardText>
-            <CardActions border>
-              <Button
-                href="https://github.com/derejmi/Anonymous-Journal"
-                target="_blank"
-                colored
-              >
-                View on Github
-              </Button>
-              <Button colored></Button>
-              <Button colored></Button>
-            </CardActions>
-            <CardMenu style={{ color: "#fff" }}>
-              <IconButton name="share" />
-            </CardMenu>
-          </Card>
-        </div>
-      );
     } else if (this.state.activeProject === 4) {
       return (
         <div className="projects-grid">
@@ -209,13 +205,22 @@ class Projects extends React.Component {
                 color: "#fff",
                 height: "200px",
                 background:
-                  "url(https://i.imgur.com/NowbryM.jpg) center / cover",
+                  "url(https://i.imgur.com/IJ22Jc0.jpg) center / cover",
               }}
             ></CardTitle>
-            <CardText>Google Clone - built in HTML,CSS and JavaScript</CardText>
+            <CardText>
+              {" "}
+              AnonJournal: An anonymous blogging site users are able to create
+              and read anonymous posts. Posts have an enforceable 200 character
+              limit and can incorporate GIFs via the Giphy API. Users can react
+              to submitted posts with comments and emojis, they can also see the
+              metrics on how many comments and specific reactions each post
+              recieves. Built with HTML, CSS and JavaScript using a JSON data
+              structure for persistent storage.
+            </CardText>
             <CardActions border>
               <Button
-                href="https://github.com/derejmi/Lap-1-Coding-Challenge-Google-Clone"
+                href="https://github.com/derejmi/Anonymous-Journal"
                 target="_blank"
                 colored
               >
@@ -237,10 +242,10 @@ class Projects extends React.Component {
             onChange={(tabId) => this.setState({ activeProject: tabId })}
             ripple
           >
+            <Tab>Algorhythm</Tab>
             <Tab>Habit Tracker</Tab>
             <Tab>Trivia Quiz</Tab>
             <Tab>URL Shortener</Tab>
-            <Tab>Anonymous Blog</Tab>
             <Tab>Other Projects</Tab>
           </Tabs>
         </div>
