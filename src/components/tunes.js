@@ -4,6 +4,18 @@ class Tunes extends React.Component {
   state = {};
 
   componentDidMount() {
+    this.fetchData();
+
+    // Set up the interval to refresh data every 3.5 minutes
+    this.interval = setInterval(this.fetchData, 3.5 * 60 * 1000); // 4 minutes in milliseconds
+  }
+
+  componentWillUnmount() {
+    // Clear the interval when the component is unmounted
+    clearInterval(this.interval);
+  }
+
+  fetchData = () => {
     const url =
       "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=DerexJayy&api_key=dc7304d9d68e62db4d004b5f7977c647&format=json&limit=1";
     fetch(url)
@@ -34,8 +46,8 @@ class Tunes extends React.Component {
         if (lastPlayed) {
           lastPlayedUnits = this.timeSincePlayed(lastPlayed);
           if (
-            lastPlayedUnits[0] != "0" &&
-            lastPlayedUnits.slice(0, 2) != "1 "
+            lastPlayedUnits[0] !== "0" &&
+            lastPlayedUnits.slice(0, 2) !== "1 "
             // lastPlayedUnits[1] !== " "
           ) {
             lastPlayedUnits += "s";
@@ -49,7 +61,7 @@ class Tunes extends React.Component {
           : `${lastPlayedUnits} ago, I listened to `;
         this.setState({ tunesText });
       });
-  }
+  };
 
   timeSincePlayed = (date) => {
     const seconds = Math.floor(new Date().getTime() / 1000 - date);
