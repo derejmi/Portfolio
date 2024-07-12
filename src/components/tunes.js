@@ -6,8 +6,8 @@ class Tunes extends React.Component {
   componentDidMount() {
     this.fetchData();
 
-    // Set up the interval to refresh data every 3.5 minutes
-    this.interval = setInterval(this.fetchData, 3.5 * 60 * 1000); // 4 minutes in milliseconds
+    // Set up the interval to refresh data every 0.5 minutes
+    this.interval = setInterval(this.fetchData, 0.5 * 60 * 1000); // 4 minutes in milliseconds
   }
 
   componentWillUnmount() {
